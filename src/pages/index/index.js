@@ -26,6 +26,10 @@ export default class index extends Component {
 
     var cur = Math.floor(x / 65) + 1
     console.log(`点击位置：X=${x}, Y=${y} ,C=${cur}`)
+    if(3==cur || 4==cur)
+    {
+      Taro.redirectTo({ url: '../consult/consult' })
+    }
   }
   render() {
     return (

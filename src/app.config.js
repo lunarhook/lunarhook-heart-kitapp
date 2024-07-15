@@ -1,9 +1,9 @@
 export default defineAppConfig({
   pages: [
     'pages/index/index',
-    'pages/consult/consult.js',
-    'pages/course/course.js',
-    'pages/userCenter/userCenter.js'
+    'pages/consult/consult',
+    'pages/course/course',
+    'pages/userCenter/userCenter'
   ],
   window: {
     backgroundTextStyle: 'light',

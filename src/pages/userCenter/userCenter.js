@@ -3,11 +3,11 @@ import { View, Image, Text, Canvas, ScrollView, Button } from '@tarojs/component
 import Taro from '@tarojs/taro'
 import { AtFloatLayout, AtDivider, AtTabBar, AtList, AtListItem } from 'taro-ui'
 import './userCenter.scss';
-import '../kit/tools/icon_mdi.scss'
-import miniapp from './assets/blueverdantmini.jpg'
-import study from './assets/study.jpg'
-import qqservice from './assets/qqservice.png'
-import app from './assets/app.png'
+//import '../kit/tools/icon_mdi.scss'
+//import miniapp from './assets/blueverdantmini.jpg'
+//import study from './assets/study.jpg'
+//import qqservice from './assets/qqservice.png'
+//import app from './assets/app.png'
 
 let UserCenterthis = null
 export default class UserCenter extends Component {
