@@ -29,26 +29,35 @@
 .mgrid1{
   .at-grid{
     &__flex {
+      .at-grid-item{
+        &__content-inner{
+          height:130%;
+        }
+      }
       .content-inner {
         &__img {
-          height: 250rpx;
-          width: 350rpx;
+          height: 430rpx;
+          width: 310rpx;
         }
+
       }
     }
   }
+  height: 440rpx;
+  align-items: center;
 }
 .mgrid2{
   .at-grid{
     &__flex {
       .content-inner {
         &__img {
-          height: 350rpx;
-          width: 350rpx;
+          height: 430rpx;
+          width: 310rpx;
         }
       }
     }
   }
+  height: 460rpx;
 }
 .mbar{
   .at-tab-bar{

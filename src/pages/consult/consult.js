@@ -16,11 +16,7 @@ import card3 from '../../../img/card3.gif'
 import card4 from '../../../img/card4.gif'
 
 import bar from '../../../img/bar.gif'
-import tab1 from '../../../img/tab1.gif'
-import tab2 from '../../../img/tab2.gif'
-import tab3 from '../../../img/tab3.gif'
-import tab4 from '../../../img/tab4.gif'
-import tab5 from '../../../img/tab5.gif'
+
 var cur = new Array()
 cur.push(logo)
 export default class consult extends Component {

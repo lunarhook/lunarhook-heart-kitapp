@@ -11,45 +11,40 @@ import button3 from '../../../img/button3.gif'
 import button4 from '../../../img/button4.gif'
 import home from '../../../img/home.gif'
 
-import card1 from '../../../img/card1.gif'
-import card2 from '../../../img/card2.gif'
-import card3 from '../../../img/card3.gif'
-import card4 from '../../../img/card4.gif'
+import card1 from '../../../img/card1.jpg'
+import card2 from '../../../img/card2.jpg'
+import card3 from '../../../img/card1.jpg'
+import card4 from '../../../img/card2.jpg'
 
 import bar from '../../../img/bar.gif'
-import tab1 from '../../../img/tab1.gif'
-import tab2 from '../../../img/tab2.gif'
-import tab3 from '../../../img/tab3.gif'
-import tab4 from '../../../img/tab4.gif'
-import tab5 from '../../../img/tab5.gif'
 var cur = new Array()
 cur.push(logo)
 export default class index extends Component {
   handleClick(e) {
     const x = e.changedTouches[0].clientX
     const y = e.changedTouches[0].clientY
-   
-    var cur = Math.floor(x/65) + 1
+
+    var cur = Math.floor(x / 65) + 1
     console.log(`点击位置：X=${x}, Y=${y} ,C=${cur}`)
   }
   render() {
     return (
       <View className='index'>
         <ScrollView className="content-page">
-          <View className='at-row  at-row__align--center' style='height: 50px'>
+          <View className='at-row  at-row__align--center' style='height: 50px;margin-left: 20px;'>
             <View className='at-col at-col-3' >
               <Image
-                style='width: 60px;height: 30px;background: #fff;'
+                style='width: 80px;height: 54px;background: #fff;'
                 src={cur[0]}
               /></View>
             <View className='at-col at-col-1'>
-              <AtIcon value='search' size='20' color='#000'></AtIcon></View>
+              <AtIcon value='search' size='30' color='#000'></AtIcon></View>
             <View className='at-col at-col-4  '>
               <AtInput
                 name='value'
                 title='标准五个字'
                 type='text'
-                placeholder='搜索课程...'
+                placeholder='搜索课程.......'
               ></AtInput></View>
           </View>
           <View className='components-page'>
@@ -84,7 +79,7 @@ export default class index extends Component {
             />
           </View>
           <View className='mgrid1'>
-            <AtGrid columnNum={2} style='' data={
+            <AtGrid columnNum={2} mode='square' hasBorder={false}  data={
               [
                 {
                   image: card1,
@@ -95,7 +90,7 @@ export default class index extends Component {
               ]
             } /> </View>
           <View className='mgrid2'>
-            <AtGrid columnNum={2} style='' data={
+            <AtGrid columnNum={2} hasBorder={false}  data={
               [
                 {
                   image: card3,
@@ -125,7 +120,6 @@ export default class index extends Component {
           </View>
         </ScrollView>
         <View className='mbar' onClick={this.handleClick.bind(this)}>
-
           <AtTabBar
             fixed
             backgroundColor='#ffffff'
@@ -133,10 +127,7 @@ export default class index extends Component {
             tabList={[
               { image: bar },
             ]}
-            
-          //current={this.state.current}
           ><Image src={bar}></Image></AtTabBar></View>
-
       </View>
     )
   }
