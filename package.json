@@ -1,8 +1,8 @@
 {
-  "name": "lunarhook-heart-kitapp",
+  "name": "lunarhook-fingerheart-kitapp",
   "version": "1.0.0",
   "private": true,
-  "description": "heart",
+  "description": "fingerheart",
   "templateInfo": {
     "name": "default",
     "typescript": false,

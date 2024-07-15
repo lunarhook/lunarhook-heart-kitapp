@@ -6,7 +6,7 @@ import prodConfig from './prod'
 // https://taro-docs.jd.com/docs/next/config#defineconfig-辅助函数
 export default defineConfig(async (merge, { command, mode }) => {
   const baseConfig = {
-    projectName: 'lunarhook-heart-kitapp',
+    projectName: 'lunarhook-fingerheart-kitapp',
     date: '2024-7-15',
     designWidth: 750,
     deviceRatio: {

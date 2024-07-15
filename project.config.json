@@ -1,7 +1,7 @@
 {
   "miniprogramRoot": "dist/",
-  "projectname": "lunarhook-heart-kitapp",
-  "description": "heart",
+  "projectname": "lunarhook-fingerheart-kitapp",
+  "description": "fingerheart",
   "appid": "wx9bd010e0e76e1001",
   "setting": {
     "urlCheck": true,
