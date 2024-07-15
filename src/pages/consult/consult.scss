@@ -1,0 +1,59 @@
+@import "~taro-ui/dist/style/components/list.scss";
+@import "~taro-ui/dist/style/components/icon.scss";
+@import "~taro-ui/dist/style/components/grid.scss";
+@import "~taro-ui/dist/style/components/input.scss";
+@import "~taro-ui/dist/style/components/icon.scss";
+@import "~taro-ui/dist/style/components/flex.scss";
+@import "~taro-ui/dist/style/components/icon.scss";
+@import "~taro-ui/dist/style/components/tab-bar.scss";
+@import "~taro-ui/dist/style/components/badge.scss";
+@import "~taro-ui/dist/style/components/fab.scss";
+.content-page{
+  margin-left: 2%;
+  width: 96%;
+}
+.mgridicon{
+  .at-grid{
+    &__flex {
+      .content-inner {
+        &__img {
+          height: 180rpx;
+          width: 120rpx;
+        }
+      }
+    }
+  }
+  margin-top: 25px;
+  height: 200px;
+}
+.mgrid1{
+  .at-grid{
+    &__flex {
+      .content-inner {
+        &__img {
+          height: 250rpx;
+          width: 350rpx;
+        }
+      }
+    }
+  }
+}
+.mgrid2{
+  .at-grid{
+    &__flex {
+      .content-inner {
+        &__img {
+          height: 350rpx;
+          width: 350rpx;
+        }
+      }
+    }
+  }
+}
+.mbar{
+  .at-tab-bar{
+    &__inner-img{
+      width: 800rpx;
+    }
+  }
+}

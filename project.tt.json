@@ -1,0 +1,9 @@
+{
+  "miniprogramRoot": "./",
+  "projectname": "lunarhook-heart-kitapp",
+  "appid": "testAppId",
+  "setting": {
+    "es6": false,
+    "minified": false
+  }
+}
