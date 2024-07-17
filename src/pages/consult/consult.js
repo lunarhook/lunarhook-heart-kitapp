@@ -28,7 +28,7 @@ export default class consult extends Component {
   render() {
     return (
       <View >
-        <ScrollView >
+        <ScrollView className='index'>
           <CoverView >
             <CoverView className='dailog'>
               <Button>{consultpagethis.state.text}</Button>

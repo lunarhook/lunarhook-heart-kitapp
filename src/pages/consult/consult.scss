@@ -1,16 +1,11 @@
-@import "~taro-ui/dist/style/components/list.scss";
+
 @import "~taro-ui/dist/style/components/icon.scss";
-@import "~taro-ui/dist/style/components/grid.scss";
-@import "~taro-ui/dist/style/components/input.scss";
-@import "~taro-ui/dist/style/components/icon.scss";
-@import "~taro-ui/dist/style/components/flex.scss";
-@import "~taro-ui/dist/style/components/icon.scss";
-@import "~taro-ui/dist/style/components/tab-bar.scss";
-@import "~taro-ui/dist/style/components/badge.scss";
-@import "~taro-ui/dist/style/components/fab.scss";
 @import "~taro-ui/dist/style/components/button.scss";
-@import "~taro-ui/dist/style/components/loading.scss";
 @import "~taro-ui/dist/style/components/toast.scss";
+.bg {
+  position: absolute;
+  height: 100%;
+}
 .controls {
   position: absolute;
   top: 1000px;
@@ -22,84 +17,4 @@
   width: 90%;
   top: 300px;
   height: 350px;
-}
-.content-page{
-  margin-left: 2%;
-  width: 96%;
-}
-.mgridicon{
-  .at-grid{
-    &__flex {
-      .content-inner {
-        &__img {
-          height: 180rpx;
-          width: 120rpx;
-        }
-      }
-    }
-  }
-  margin-top: 25px;
-  height: 200px;
-}
-.mgrid1{
-  .at-grid{
-    &__flex {
-      .content-inner {
-        &__img {
-          height: 250rpx;
-          width: 350rpx;
-        }
-      }
-    }
-  }
-}
-.mgrid2{
-  .at-grid{
-    &__flex {
-      .content-inner {
-        &__img {
-          height: 350rpx;
-          width: 350rpx;
-        }
-      }
-    }
-  }
-}
-.mbar{
-  .at-tab-bar{
-    &__inner-img{
-      width: 800rpx;
-    }
-  }
-}
-.contain {
-  flex: 0;
-  //vertical-align:middle;
-  align-content: flex-start;
-  text-align:left;
-  //padding-top: 120px;
-  padding-left: 50px;
-  padding-right: 50px;
-  line-height: 30px;
-}
-.slogan {
-  //width: 100%;
-  //height: 800px;
-  padding-top: 50px;
-  align-content: flex-end;
-  text-align: right;
-  padding-right: 50px;
-}
-
-.imagecontain {
-  flex: 0;
-  //vertical-align:middle;
-  text-align: center;
-}
-.imageslogan {
-  width: 100%;
-}
-.text {
-  opacity: 1;
-
 }
