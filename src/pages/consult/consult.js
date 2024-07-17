@@ -32,10 +32,10 @@ export default class consult extends Component {
         <ScrollView className='index'>
           <CoverImage src={bg} className='bg' />
           <CoverView className='dailog'>
-            <Button>{consultpagethis.state.text}</Button>
+            <Button>{this.state.text}</Button>
           </CoverView>
           <CoverImage src={button} className='controls' onClick={this.OnTap.bind(this)} />
-          <AtToast isOpened={consultpagethis.state.open} text="沟通" ></AtToast>
+          <AtToast isOpened={this.state.open} text="沟通" ></AtToast>
         </ScrollView>
       </View>
     )
