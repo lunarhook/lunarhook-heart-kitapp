@@ -28,7 +28,15 @@ export default class index extends Component {
     console.log(`点击位置：X=${x}, Y=${y} ,C=${cur}`)
     if(3==cur || 4==cur)
     {
-      Taro.redirectTo({ url: '../consult/consult' })
+      Taro.navigateTo({ url: '../consult/consult' })
+    }
+    else if(2==cur)
+    {
+      Taro.navigateTo({ url: '../detail/detail' })
+    }
+    else if(5==cur)
+    {
+      Taro.navigateTo({ url: '../course/course' })
     }
   }
   render() {

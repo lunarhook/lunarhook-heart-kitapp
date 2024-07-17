@@ -1,14 +1,42 @@
 export default defineAppConfig({
   pages: [
     'pages/index/index',
-    'pages/consult/consult',
-    'pages/course/course',
-    'pages/userCenter/userCenter'
   ],
+  lazyCodeLoading: 'requiredComponents',
   window: {
     backgroundTextStyle: 'light',
     navigationBarBackgroundColor: '#fff',
-    navigationBarTitleText: 'WeChat',
+    navigationBarTitleText: '比心',
     navigationBarTextStyle: 'black'
-  }
+  },
+  subPackages:[
+    {
+      "root":'pages/consult',
+      pages: [
+        'consult',
+      ],
+      //"independent": true
+    },
+    {    
+      "root":'pages/userCenter',
+      pages: [
+        'userCenter',
+      ],
+      //"independent": true
+    },
+    {
+      "root":'pages/course',
+      pages: [
+        'course'
+      ],
+      //"independent": true
+    },
+    {
+      "root":'pages/detail',
+      pages: [
+        'detail'
+      ],
+      //"independent": true
+    },
+  ]
 })
