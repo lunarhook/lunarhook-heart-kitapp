@@ -68,7 +68,7 @@ export default class index extends Component {
             </AtList>
           </View>
           <View className='mgridicon' >
-            <AtGrid columnNum={4} className='at-row__align--center' data={
+            <AtGrid columnNum={4} hasBorder={false}  className='at-row__align--center' data={
               [
                 {
                   image: button1,
