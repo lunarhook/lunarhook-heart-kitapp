@@ -10,9 +10,9 @@ let consultpagethis = null
 export default class consult extends Component {
   constructor(props) {
     super(props)
-    this.state={
-      open:false,
-      text:"123"
+    this.state = {
+      open: false,
+      text: "123"
     }
     consultpagethis = this
   }
@@ -21,22 +21,21 @@ export default class consult extends Component {
     const y = e.changedTouches[0].clientY
 
     var cur = Math.floor(x / 65) + 1
-    console.log(`点击位置：X=${x}, Y=${y} ,C=${cur}`,consultpagethis)
-    consultpagethis.setState({open:true,text:consultpagethis.state.text+"!"})
-
+    
+    consultpagethis.setState({ open: true, text: consultpagethis.state.text + "!" })
+    console.log(`点击位置：X=${x}, Y=${y} ,C=${cur}`, consultpagethis)
+    this.forceUpdate()
   }
   render() {
     return (
       <View >
         <ScrollView className='index'>
-          <CoverView >
-            <CoverView className='dailog'>
-              <Button>{consultpagethis.state.text}</Button>
-              </CoverView>
-            <CoverImage src={bg} />
-            <CoverImage src={button} className='controls' onTap={this.OnTap.bind(this)}/>
+          <CoverImage src={bg} className='bg' />
+          <CoverView className='dailog'>
+            <Button>{consultpagethis.state.text}</Button>
           </CoverView>
-          <AtToast isOpened={true} text="沟通" ></AtToast>
+          <CoverImage src={button} className='controls' onClick={this.OnTap.bind(this)} />
+          <AtToast isOpened={consultpagethis.state.open} text="沟通" ></AtToast>
         </ScrollView>
       </View>
     )
