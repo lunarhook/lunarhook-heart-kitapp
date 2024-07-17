@@ -8,52 +8,20 @@
 @import "~taro-ui/dist/style/components/tab-bar.scss";
 @import "~taro-ui/dist/style/components/badge.scss";
 @import "~taro-ui/dist/style/components/fab.scss";
+.components-page{
+  width: 100%;
+  height: 264px;
+}
+
 .content-page{
   margin-left: 2%;
   width: 96%;
 }
-.mgridicon{
-  .at-grid{
-    &__flex {
-      .content-inner {
-        &__img {
-          height: 180rpx;
-          width: 120rpx;
-        }
-      }
-    }
-  }
-  margin-top: 25px;
-  height: 200px;
+.content-show{
+  height: 451rpx;
+  width: 749rpx;
 }
-.mgrid1{
-  .at-grid{
-    &__flex {
-      .content-inner {
-        &__img {
-          height: 250rpx;
-          width: 350rpx;
-        }
-      }
-    }
-  }
-}
-.mgrid2{
-  .at-grid{
-    &__flex {
-      .content-inner {
-        &__img {
-          height: 350rpx;
-          width: 350rpx;
-        }
-      }
-    }
-  }
-}
-.mbar{
-  .at-tab-bar{
-    &__inner-img{
-      width: 800rpx;
-    }
-  }
+.content-buy{
+  height: 170rpx;
+  width: 749rpx;
 }
