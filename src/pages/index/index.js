@@ -20,22 +20,24 @@ import bar from '../../../img/bar.gif'
 var cur = new Array()
 cur.push(logo)
 export default class index extends Component {
+  handlePic(cur) {
+    if (2 == cur) {
+      Taro.navigateTo({ url: '../psy/psy' })
+    }
+  }
   handleClick(e) {
     const x = e.changedTouches[0].clientX
     const y = e.changedTouches[0].clientY
 
     var cur = Math.floor(x / 65) + 1
     console.log(`点击位置：X=${x}, Y=${y} ,C=${cur}`)
-    if(3==cur || 4==cur)
-    {
+    if (3 == cur || 4 == cur) {
       Taro.navigateTo({ url: '../consult/consult' })
     }
-    else if(2==cur)
-    {
+    else if (2 == cur) {
       Taro.navigateTo({ url: '../detail/detail' })
     }
-    else if(5==cur)
-    {
+    else if (5 == cur) {
       Taro.navigateTo({ url: '../course/course' })
     }
   }
@@ -62,29 +64,30 @@ export default class index extends Component {
           <View className='components-page'>
             <AtList>
               <Image
-                 style='width: 100%;height: 337rpx;background: #fff;mode:"scaleToFill"'
+                style='width: 100%;height: 337rpx;background: #fff;mode:"scaleToFill"'
                 src={banner}
               />
             </AtList>
           </View>
           <View className='at-row at-row__justify--around'  >
-          <Image className='at-col at-col-2 at-col--auto'
-                 style='width: 122rpx;height: 174rpx;background: #fff;'
-                src={button1}
-              />
-                        <Image className='at-col at-col-2 at-col--auto'
-                 style='width: 122rpx;height: 174rpx;background: #fff;'
-                src={button2}
-              />
-                        <Image className='at-col at-col-2 at-col--auto'
-                 style='width: 122rpx;height: 174rpx;background: #fff;'
-                src={button3}
-              />
-                        <Image className='at-col at-col-2 at-col--auto'
-                 style='width: 122rpx;height: 174rpx;background: #fff;'
-                src={button4}
-              />
-            </View>
+            <Image className='at-col at-col-2 at-col--auto'
+              style='width: 122rpx;height: 174rpx;background: #fff;'
+              src={button1}
+            />
+            <Image className='at-col at-col-2 at-col--auto'
+              style='width: 122rpx;height: 174rpx;background: #fff;'
+              src={button2}
+              onClick={()=>this.handlePic(2)}
+            />
+            <Image className='at-col at-col-2 at-col--auto'
+              style='width: 122rpx;height: 174rpx;background: #fff;'
+              src={button3}
+            />
+            <Image className='at-col at-col-2 at-col--auto'
+              style='width: 122rpx;height: 174rpx;background: #fff;'
+              src={button4}
+            />
+          </View>
           <View className='components-page'>
             <Image
               style='width: 100%;height: 152rpx;background: #fff;mode:"scaleToFill"'
@@ -92,7 +95,7 @@ export default class index extends Component {
             />
           </View>
           <View className='mgrid1'>
-            <AtGrid columnNum={2} mode='square' hasBorder={false}  data={
+            <AtGrid columnNum={2} mode='square' hasBorder={false} data={
               [
                 {
                   image: card1,
@@ -103,7 +106,7 @@ export default class index extends Component {
               ]
             } /> </View>
           <View className='mgrid1'>
-            <AtGrid columnNum={2} mode='square' hasBorder={false}  data={
+            <AtGrid columnNum={2} mode='square' hasBorder={false} data={
               [
                 {
                   image: card1,

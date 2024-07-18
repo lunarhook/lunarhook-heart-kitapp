@@ -38,5 +38,21 @@ export default defineAppConfig({
       ],
       //"independent": true
     },
+    {
+      "root":'pages/psy',
+      pages: [
+        'psy'
+      ],
+      //"independent": true
+    },
+    {
+      "root":'pages/PsychLib',
+      pages: [
+        'HollandModule',
+        'MBTIModule',
+        'EnneagramModule',
+      ],
+      //"independent": true
+    },
   ]
 })
