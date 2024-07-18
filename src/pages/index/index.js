@@ -39,6 +39,8 @@ export default class index extends Component {
     }
     else if (5 == cur) {
       Taro.navigateTo({ url: '../course/course' })
+    }else if(6==cur || 7==cur){
+      Taro.navigateTo({url: '../userCenter/userCenter'})
     }
   }
   render() {

@@ -4,7 +4,8 @@ import Taro from '@tarojs/taro'
 import { AtFloatLayout, AtDivider, AtTabBar, AtList, AtListItem } from 'taro-ui'
 import './userCenter.scss';
 //import '../kit/tools/icon_mdi.scss'
-//import miniapp from './assets/blueverdantmini.jpg'
+
+import miniapp from '../../../img/miniapp.jpg'
 //import study from './assets/study.jpg'
 //import qqservice from './assets/qqservice.png'
 //import app from './assets/app.png'
@@ -67,61 +68,32 @@ export default class UserCenter extends Component {
           node.width = w * dpr
           node.height = h * dpr
           ctx.scale(dpr, dpr)
-          Taro.getImageInfo({ src: 'https://www.lunarhook.com/static/img/study.jpg' })
-            .then((res) => {
+
               var img1 = node.createImage();
-              var img2 = node.createImage();
-              var img3 = node.createImage();
-              var img4 = node.createImage();
               let p1 = new Promise(function (resolve, reject) {
                 img1.src = miniapp
                 img1.onload = function () {
                   resolve(img1)
                 }
               });
-              let p2 = new Promise(function (resolve, reject) {
-                img2.src = study
-                img2.onload = function () {
-                  resolve(img1)
-                }
-              });
-              let p3 = new Promise(function (resolve, reject) {
-                img3.src = qqservice
-                img3.onload = function () {
-                  resolve(img3)
-                }
-              });
-              let p4 = new Promise(function (resolve, reject) {
-                img4.src = app
-                img4.onload = function () {
-                  resolve(img4)
-                }
-              });
-              Promise.all([p1, p2, p3, p4]).then((ret) => {
+              
+              Promise.all([p1]).then((ret) => {
                 ctx.font = "16px Georgia"
                 ctx.textAlign = "center";
                 ctx.fillStyle = "#ffffff"
                 ctx.fillRect(0, 0, w, h)
                 ctx.fillStyle = "#000000"
-                //ctx.drawImage(img2, 20, 20, 140, 140);
-                //ctx.fillText("癸卯学习服务二维码", 90, 175)
-                //ctx.drawImage(img3, 200, 20, 140, 140);
-                //ctx.fillText("山海爻服务支持QQ群", 270, 175)
-
-                //ctx.drawImage(img1, 20, 200, 140, 140);
                 ctx.drawImage(img1, w / 2 - 70, 200 - 140, 140, 140);
-                ctx.fillText("分享山海爻小程序", w / 2, 355 - 140)
-                //ctx.drawImage(img4, 200, 200, 140, 140);
-                //ctx.fillText("下载山海爻原生应用", 270, 355)
+                ctx.fillText("分享比心小程序", w / 2, 355 - 140)
                 if (undefined !== UserCenterthis.state.avatarUrl) {
                   var img5 = node.createImage();
                   let p5 = new Promise(function (resolve, reject) {
                     img5.src = UserCenterthis.state.avatarUrl
                     img5.onload = function () {
                       if (undefined !== UserCenterthis.nickName) {
-                        ctx.fillText(UserCenterthis.nickName + "邀请您加入山海爻", 270, 355 + 70 - 70)
+                        ctx.fillText(UserCenterthis.nickName + "邀请您加入比心", 270, 355 + 70 - 70)
                       } else {
-                        ctx.fillText("欢迎您加入山海爻", 270, 375 + 35 - 70)
+                        ctx.fillText("欢迎您加入比心", 270, 375 + 35 - 70)
                       }
                       ctx.beginPath()
                       ctx.arc(55 + 35, 375 + 35 - 70, 35, 0, 2 * Math.PI)
@@ -157,7 +129,7 @@ export default class UserCenter extends Component {
                 }, 500)
               })
               return
-            })
+            
         }).exec()
       })
     }, 500)
@@ -186,12 +158,12 @@ export default class UserCenter extends Component {
             <Text style="opacity: 0">blockline</Text>
             <Text style="opacity: 0">blockline</Text>
             <View className="imageslogan">
-              <Image style='width: 140px;height: 140px;background: #fff;' src='./assets/blueverdantmini.jpg' showMenuByLongpress={true}>
+              <Image style='width: 140px;height: 140px;background: #fff;' src={miniapp} showMenuByLongpress={true}>
               </Image>
             </View>
             <View className="imagecontain">
               <View className="imageslogan">
-                <Text>分享山海爻小程序</Text>
+                <Text>分享比心小程序</Text>
               </View>
             </View>
             <View className="imageslogan">
@@ -211,21 +183,6 @@ export default class UserCenter extends Component {
             </View>
             <View className="imageslogan">
               <Text style="opacity: 0">blockline</Text>
-            </View>
-            <View className="imageslogan">
-              <Image style='width: 140px;height: 140px;background: #fff;' src='./assets/blueverdantservice.png'>    
-              <View style="opacity: 0;position: absolute; width: 100%; height: 100%; top: 0; transform-origin: top right;">
-                <cell url='https://work.weixin.qq.com/gm/64a713d4c2c6789b47918163c08af3b3' />
-                <cell url='https://work.weixin.qq.com/gm/64a713d4c2c6789b47918163c08af3b3' />
-                <cell url='https://work.weixin.qq.com/gm/64a713d4c2c6789b47918163c08af3b3' />
-                <cell url='https://work.weixin.qq.com/gm/64a713d4c2c6789b47918163c08af3b3' />
-              </View>
-              </Image>
-            </View>
-            <View className="imagecontain">
-              <View className="imageslogan">
-                <Text>癸卯心理咨询服务客户群</Text>
-              </View>
             </View>
           </View>
         </ScrollView>
