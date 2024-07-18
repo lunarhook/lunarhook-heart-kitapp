@@ -7,7 +7,7 @@ export default defineAppConfig({
     backgroundTextStyle: 'light',
     navigationBarBackgroundColor: '#fff',
     navigationBarTitleText: '比心',
-    navigationBarTextStyle: 'black'
+    navigationBarTextStyle: 'black',
   },
   subPackages:[
     {

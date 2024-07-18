@@ -2,6 +2,11 @@
 @import "~taro-ui/dist/style/components/icon.scss";
 @import "~taro-ui/dist/style/components/button.scss";
 @import "~taro-ui/dist/style/components/toast.scss";
+.navigation-bar {
+  background-image: url('../../../img/detail.jpg'); /* 替换为你的图片路径 */
+  background-size: cover;
+  background-position: center;
+}
 .index{
   position: absolute;
   z-index: -10;

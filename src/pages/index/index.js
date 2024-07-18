@@ -62,31 +62,32 @@ export default class index extends Component {
           <View className='components-page'>
             <AtList>
               <Image
-                style='width: 100%;height: 200px;background: #fff;'
+                 style='width: 100%;height: 337rpx;background: #fff;mode:"scaleToFill"'
                 src={banner}
               />
             </AtList>
           </View>
-          <View className='mgridicon' >
-            <AtGrid columnNum={4} hasBorder={false}  className='at-row__align--center' data={
-              [
-                {
-                  image: button1,
-                },
-                {
-                  image: button2,
-                },
-                {
-                  image: button3,
-                },
-                {
-                  image: button4,
-                },
-              ]
-            } /></View>
+          <View className='at-row at-row__justify--around'  >
+          <Image className='at-col at-col-2 at-col--auto'
+                 style='width: 122rpx;height: 174rpx;background: #fff;'
+                src={button1}
+              />
+                        <Image className='at-col at-col-2 at-col--auto'
+                 style='width: 122rpx;height: 174rpx;background: #fff;'
+                src={button2}
+              />
+                        <Image className='at-col at-col-2 at-col--auto'
+                 style='width: 122rpx;height: 174rpx;background: #fff;'
+                src={button3}
+              />
+                        <Image className='at-col at-col-2 at-col--auto'
+                 style='width: 122rpx;height: 174rpx;background: #fff;'
+                src={button4}
+              />
+            </View>
           <View className='components-page'>
             <Image
-              style='width: 100%;height: 80px;background: #fff;'
+              style='width: 100%;height: 152rpx;background: #fff;mode:"scaleToFill"'
               src={home}
             />
           </View>
@@ -101,14 +102,14 @@ export default class index extends Component {
                 },
               ]
             } /> </View>
-          <View className='mgrid2'>
-            <AtGrid columnNum={2} hasBorder={false}  data={
+          <View className='mgrid1'>
+            <AtGrid columnNum={2} mode='square' hasBorder={false}  data={
               [
                 {
-                  image: card3,
+                  image: card1,
                 },
                 {
-                  image: card4,
+                  image: card2,
                 },
               ]
             } /> </View>
