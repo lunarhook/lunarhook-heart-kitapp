@@ -147,7 +147,7 @@ export default class index extends Component {
             tabList={[
               { image: bar },
             ]}
-          ><Image src={bar}></Image></AtTabBar></View>
+          ></AtTabBar></View>
       </View>
     )
   }

@@ -1,6 +1,6 @@
 import { View, Text, ScrollView, Image, CoverImage, CoverView, Button } from '@tarojs/components'
 import React, { Component } from 'react'
-import { AtToast } from "taro-ui"
+import { AtToast, AtTextarea } from "taro-ui"
 import './consult.scss'
 
 import bg from '../../../img/consult.bg.jpg'
@@ -21,20 +21,19 @@ export default class consult extends Component {
     const y = e.changedTouches[0].clientY
 
     var cur = Math.floor(x / 65) + 1
-    
-    consultpagethis.setState({ open: true, text: consultpagethis.state.text + "!" })
-    console.log(`点击位置：X=${x}, Y=${y} ,C=${cur}`, consultpagethis)
-    this.forceUpdate()
+    if (x > 145 && x < 290 && y > 590 && y < 750) {
+      consultpagethis.setState({ open: true, text: consultpagethis.state.text + "123123daddfs erg " })
+      console.log(`点击位置：X=${x}, Y=${y} ,C=${cur}`, consultpagethis)
+      this.forceUpdate()
+    }
+
   }
   render() {
     return (
-      <View >
-        <ScrollView className='index'>
-          <CoverImage src={bg} className='bg' />
-          <CoverView className='dailog'>
-            <Button>{this.state.text}</Button>
-          </CoverView>
-          <CoverImage src={button} className='controls' onClick={this.OnTap.bind(this)} />
+      <View onClick={this.OnTap.bind(this)} >
+        <ScrollView className='index' >
+          <View className=' dailog at-row at-row__align--center at-col--wrap'>
+          <Text>{this.state.text}</Text></View>
           <AtToast isOpened={this.state.open} text="沟通" ></AtToast>
         </ScrollView>
       </View>
