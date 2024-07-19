@@ -7,16 +7,20 @@ import banner from '../../../img/course.bar.jpg'
 import show from '../../../img/course.show.jpg'
 import buy from '../../../img/course.buy.jpg'
 export default class course extends Component {
-  handleClick(e) {
-    const x = e.changedTouches[0].clientX
-    const y = e.changedTouches[0].clientY
+  handleClick(cur) {
+    if("show"==cur)
+    {
+      Taro.navigateToMiniProgram({
+        appId: 'wx8dd67b2e08d5f85a', // 替换为目标小程序的appId
+        //path: 'pages/index/index' // 目标小程序内的页面路径
+      })
+    }else if("buy"==cur){
+      Taro.navigateToMiniProgram({
+        appId: 'wx3d61dcee52169770', // 替换为目标小程序的appId
+        path:'pages/index/index?scene=1128' // 目标小程序内的页面路径
+      })
+    }
 
-    var cur = Math.floor(x / 65) + 1
-    console.log(`点击位置：X=${x}, Y=${y} ,C=${cur}`)
-    Taro.navigateToMiniProgram({
-      appId: 'wx8dd67b2e08d5f85a', // 替换为目标小程序的appId
-      //path: 'pages/index/index' // 目标小程序内的页面路径
-    })
   }
   render() {
     return (
@@ -29,27 +33,35 @@ export default class course extends Component {
         <ScrollView className="content-page">
           <Image className="content-show"
             src={show}
+            onClick={()=>this.handleClick("show")}
           />
           <Image className="content-buy"
             src={buy}
+            onClick={()=>this.handleClick("buy")}
           />
-                    <Image className="content-show"
+          <Image className="content-show"
             src={show}
+            onClick={()=>this.handleClick("show")}
           />
           <Image className="content-buy"
             src={buy}
+            onClick={()=>this.handleClick("buy")}
           />
-                    <Image className="content-show"
+          <Image className="content-show"
             src={show}
+            onClick={()=>this.handleClick("show")}
           />
           <Image className="content-buy"
             src={buy}
+            onClick={()=>this.handleClick("buy")}
           />
-                    <Image className="content-show"
+          <Image className="content-show"
             src={show}
+            onClick={()=>this.handleClick("show")}
           />
           <Image className="content-buy"
             src={buy}
+            onClick={()=>this.handleClick("buy")}
           />
 
           <View>

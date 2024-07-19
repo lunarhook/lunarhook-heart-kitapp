@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 import Taro from '@tarojs/taro'
 import { AtList, AtInput, AtGrid, AtIcon, AtTabBar, AtFab } from "taro-ui"
 import './index.scss'
-import logo from '../../../img/logo.gif'
+import search from '../../../img/search.jpg'
 import banner from '../../../img/banner.gif'
 import button1 from '../../../img/button1.gif'
 import button2 from '../../../img/button2.gif'
@@ -18,7 +18,7 @@ import card4 from '../../../img/card2.jpg'
 
 import bar from '../../../img/bar.gif'
 var cur = new Array()
-cur.push(logo)
+cur.push(search)
 export default class index extends Component {
   handleCourse(e) {
     Taro.navigateToMiniProgram({
@@ -56,18 +56,10 @@ export default class index extends Component {
           <View className='at-row  at-row__align--center' style='height: 50px;margin-left: 20px;'>
             <View className='at-col at-col-3' >
               <Image
-                style='width: 80px;height: 54px;background: #fff;'
+                style='width: 668rpx;height: 86rpx;background: #fff;'
                 src={cur[0]}
-              /></View>
-            <View className='at-col at-col-1'>
-              <AtIcon value='search' size='30' color='#000'></AtIcon></View>
-            <View className='at-col at-col-4  '>
-              <AtInput
-                name='value'
-                title='标准五个字'
-                type='text'
-                placeholder='搜索课程.......'
-              ></AtInput></View>
+              />
+            </View>
           </View>
           <View className='components-page'>
             <AtList>
