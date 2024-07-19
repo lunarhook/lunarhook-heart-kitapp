@@ -58,11 +58,12 @@ export default class index extends Component {
               <Image
                 style='width: 668rpx;height: 86rpx;background: #fff;'
                 src={cur[0]}
+                hasBorder={false}
               />
             </View>
           </View>
           <View className='components-page'>
-            <AtList>
+            <AtList hasBorder={false}>
               <Image
                 style='width: 100%;height: 337rpx;background: #fff;mode:"scaleToFill"'
                 src={banner}
