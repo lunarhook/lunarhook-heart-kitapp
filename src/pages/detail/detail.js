@@ -1,6 +1,6 @@
 import { View, Text, ScrollView, Image, CoverImage, CoverView, Button } from '@tarojs/components'
 import React, { Component } from 'react'
-import { AtToast } from "taro-ui"
+import { AtNavBar } from "taro-ui"
 import './detail.scss'
 
 import bg from '../../../img/detail.jpg'

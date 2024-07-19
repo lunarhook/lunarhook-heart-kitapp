@@ -20,6 +20,12 @@ import bar from '../../../img/bar.gif'
 var cur = new Array()
 cur.push(logo)
 export default class index extends Component {
+  handleCourse(e) {
+    Taro.navigateToMiniProgram({
+      appId: 'wx8dd67b2e08d5f85a', // 替换为目标小程序的appId
+      //path: 'pages/index/index' // 目标小程序内的页面路径
+    })
+  }
   handlePic(cur) {
     if (2 == cur) {
       Taro.navigateTo({ url: '../psy/psy' })
@@ -68,6 +74,7 @@ export default class index extends Component {
               <Image
                 style='width: 100%;height: 337rpx;background: #fff;mode:"scaleToFill"'
                 src={banner}
+                onClick={this.handleCourse.bind(this)}
               />
             </AtList>
           </View>
@@ -94,6 +101,7 @@ export default class index extends Component {
             <Image
               style='width: 100%;height: 152rpx;background: #fff;mode:"scaleToFill"'
               src={home}
+              onClick={this.handleCourse.bind(this)}
             />
           </View>
           <View className='mgrid1'>
@@ -106,18 +114,19 @@ export default class index extends Component {
                   image: card2,
                 },
               ]
-            } /> </View>
+            }  onClick={(item,index)=>this.handleCourse(item)}/> </View>
           <View className='mgrid1'>
             <AtGrid columnNum={2} mode='square' hasBorder={false} data={
               [
                 {
                   image: card1,
+                  
                 },
                 {
                   image: card2,
                 },
               ]
-            } /> </View>
+            }  onClick={(item,index)=>{this.handleCourse(item)}} /> </View>
           <View>
             <Text style="opacity: 0">blockline</Text>
           </View>
