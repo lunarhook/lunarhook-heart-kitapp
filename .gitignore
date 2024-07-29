@@ -1,9 +1,21 @@
+#
+# 构建目录
+#
 dist/
-deploy_versions/
+
+#
+# 依赖目录
+#
+node_modules/
+
+#
+# 临时目录
+#
 .temp/
 .rn_temp/
-node_modules/
-.DS_Store
 .swc
-/source/desgin/images
-*.psd
+
+#
+# 系统文件
+#
+.DS_Store
