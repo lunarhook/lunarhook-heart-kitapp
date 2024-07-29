@@ -1,7 +1,7 @@
 {
   "miniprogramRoot": "dist/",
   "projectname": "lunarhook-fingerheart-kitapp",
-  "description": "fingerheart",
+  "description": "项目配置文件，详见文档：https://developers.weixin.qq.com/miniprogram/dev/devtools/projectconfig.html",
   "appid": "wx32f13a7baedad867",
   "setting": {
     "urlCheck": true,
@@ -14,7 +14,22 @@
       "ignore": [],
       "disablePlugins": [],
       "outputPath": ""
-    }
+    },
+    "coverView": true,
+    "lazyloadPlaceholderEnable": false,
+    "preloadBackgroundData": false,
+    "autoAudits": false,
+    "uglifyFileName": false,
+    "uploadWithSourceMap": true,
+    "showShadowRootInWxmlPanel": true,
+    "packNpmManually": false,
+    "packNpmRelationList": [],
+    "minifyWXSS": true,
+    "useStaticServer": true,
+    "showES6CompileOption": false,
+    "checkInvalidKey": true,
+    "disableUseStrict": false,
+    "useCompilerPlugins": false
   },
   "compileType": "miniprogram",
   "libVersion": "3.5.0",
