@@ -1,6 +1,8 @@
+// eslint-disable-next-line no-undef
 export default defineAppConfig({
   pages: [
-    'pages/index/index',
+    // 'pages/index/index',
+    'pages/home/index'
   ],
   lazyCodeLoading: 'requiredComponents',
   window: {
@@ -9,50 +11,50 @@ export default defineAppConfig({
     navigationBarTitleText: '比心',
     navigationBarTextStyle: 'black',
   },
-  subPackages:[
-    {
-      "root":'pages/consult',
-      pages: [
-        'consult',
-      ],
-      //"independent": true
-    },
-    {    
-      "root":'pages/userCenter',
-      pages: [
-        'userCenter',
-      ],
-      //"independent": true
-    },
-    {
-      "root":'pages/course',
-      pages: [
-        'course'
-      ],
-      //"independent": true
-    },
-    {
-      "root":'pages/detail',
-      pages: [
-        'detail'
-      ],
-      //"independent": true
-    },
-    {
-      "root":'pages/psy',
-      pages: [
-        'psy'
-      ],
-      //"independent": true
-    },
-    {
-      "root":'pages/PsychLib',
-      pages: [
-        'HollandModule',
-        'MBTIModule',
-        'EnneagramModule',
-      ],
-      //"independent": true
-    },
-  ]
+  // subPackages:[
+  //   {
+  //     "root":'pages/consult',
+  //     pages: [
+  //       'consult',
+  //     ],
+  //     //"independent": true
+  //   },
+  //   {
+  //     "root":'pages/userCenter',
+  //     pages: [
+  //       'userCenter',
+  //     ],
+  //     //"independent": true
+  //   },
+  //   {
+  //     "root":'pages/course',
+  //     pages: [
+  //       'course'
+  //     ],
+  //     //"independent": true
+  //   },
+  //   {
+  //     "root":'pages/detail',
+  //     pages: [
+  //       'detail'
+  //     ],
+  //     //"independent": true
+  //   },
+  //   {
+  //     "root":'pages/psy',
+  //     pages: [
+  //       'psy'
+  //     ],
+  //     //"independent": true
+  //   },
+  //   {
+  //     "root":'pages/PsychLib',
+  //     pages: [
+  //       'HollandModule',
+  //       'MBTIModule',
+  //       'EnneagramModule',
+  //     ],
+  //     //"independent": true
+  //   },
+  // ]
 })

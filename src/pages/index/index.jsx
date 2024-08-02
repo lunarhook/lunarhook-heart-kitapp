@@ -1,7 +1,7 @@
-import { View, Text, ScrollView, Image, Input } from '@tarojs/components'
-import React, { Component } from 'react'
+import { View, Text, ScrollView, Image } from '@tarojs/components'
+import { Component } from 'react'
 import Taro from '@tarojs/taro'
-import { AtList, AtInput, AtGrid, AtIcon, AtTabBar, AtFab } from "taro-ui"
+import { AtList, AtGrid, AtTabBar } from "taro-ui"
 import './index.scss'
 import search from '../../../img/search.jpg'
 import banner from '../../../img/banner.gif'
@@ -13,20 +13,20 @@ import home from '../../../img/home.gif'
 
 import card1 from '../../../img/card1.jpg'
 import card2 from '../../../img/card2.jpg'
-import card3 from '../../../img/card1.jpg'
-import card4 from '../../../img/card2.jpg'
 
 import bar from '../../../img/bar.gif'
+
 var cur = new Array()
 cur.push(search)
+
 export default class index extends Component {
-  handleCourse(e) {
+  handleCourse() {
     Taro.navigateToMiniProgram({
       appId: 'wx8dd67b2e08d5f85a', // 替换为目标小程序的appId
       //path: 'pages/index/index' // 目标小程序内的页面路径
     })
   }
-  handlePic(cur) {
+  handlePic() {
     if (2 == cur) {
       Taro.navigateTo({ url: '../psy/psy' })
     }
@@ -35,7 +35,7 @@ export default class index extends Component {
     const x = e.changedTouches[0].clientX
     const y = e.changedTouches[0].clientY
 
-    var cur = Math.floor(x / 65) + 1
+    cur = Math.floor(x / 65) + 1
     console.log(`点击位置：X=${x}, Y=${y} ,C=${cur}`)
     if (3 == cur || 4 == cur) {
       Taro.navigateTo({ url: '../consult/consult' })
@@ -45,14 +45,15 @@ export default class index extends Component {
     }
     else if (5 == cur) {
       Taro.navigateTo({ url: '../course/course' })
-    }else if(6==cur || 7==cur){
-      Taro.navigateTo({url: '../userCenter/userCenter'})
+    } else if (6 == cur || 7 == cur) {
+      Taro.navigateTo({ url: '../userCenter/userCenter' })
     }
   }
   render() {
     return (
       <View className='index'>
-        <ScrollView className="content-page">
+        测试一下
+        {/* <ScrollView className='content-page'>
           <View className='at-row  at-row__align--center' style='height: 50px;margin-left: 20px;'>
             <View className='at-col at-col-3' >
               <Image
@@ -79,7 +80,7 @@ export default class index extends Component {
             <Image className='at-col at-col-2 at-col--auto'
               style='width: 122rpx;height: 174rpx;background: #fff;'
               src={button2}
-              onClick={()=>this.handlePic(2)}
+              onClick={() => this.handlePic(2)}
             />
             <Image className='at-col at-col-2 at-col--auto'
               style='width: 122rpx;height: 174rpx;background: #fff;'
@@ -98,45 +99,54 @@ export default class index extends Component {
             />
           </View>
           <View className='mgrid1'>
-            <AtGrid columnNum={2} mode='square' hasBorder={false} data={
-              [
+            <AtGrid
+              columnNum={2}
+              mode='square'
+              hasBorder={false}
+              data={[
                 {
                   image: card1,
                 },
                 {
                   image: card2,
                 },
-              ]
-            }  onClick={(item,index)=>this.handleCourse(item)}/> </View>
+              ]}
+              onClick={(item) => this.handleCourse(item)}
+            />
+          </View>
           <View className='mgrid1'>
-            <AtGrid columnNum={2} mode='square' hasBorder={false} data={
-              [
+            <AtGrid
+              columnNum={2}
+              mode='square'
+              hasBorder={false}
+              data={[
                 {
                   image: card1,
-                  
                 },
                 {
                   image: card2,
                 },
-              ]
-            }  onClick={(item,index)=>{this.handleCourse(item)}} /> </View>
-          <View>
-            <Text style="opacity: 0">blockline</Text>
+              ]}
+              onClick={(item) => { this.handleCourse(item) }}
+            />
           </View>
           <View>
-            <Text style="opacity: 0">blockline</Text>
+            <Text style='opacity: 0'>blockline</Text>
           </View>
           <View>
-            <Text style="opacity: 0">blockline</Text>
+            <Text style='opacity: 0'>blockline</Text>
           </View>
           <View>
-            <Text style="opacity: 0">blockline</Text>
+            <Text style='opacity: 0'>blockline</Text>
           </View>
           <View>
-            <Text style="opacity: 0">blockline</Text>
+            <Text style='opacity: 0'>blockline</Text>
           </View>
           <View>
-            <Text style="opacity: 0">blockline</Text>
+            <Text style='opacity: 0'>blockline</Text>
+          </View>
+          <View>
+            <Text style='opacity: 0'>blockline</Text>
           </View>
         </ScrollView>
         <View className='mbar' onClick={this.handleClick.bind(this)}>
@@ -147,7 +157,7 @@ export default class index extends Component {
             tabList={[
               { image: bar },
             ]}
-          ></AtTabBar></View>
+          ></AtTabBar></View> */}
       </View>
     )
   }

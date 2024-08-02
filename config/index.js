@@ -35,7 +35,13 @@ export default defineConfig(async (merge) => {
     // 框架，react，nerv，vue, vue3 等
     framework: 'react',
     // 编译工具
-    compiler: 'webpack5',
+    compiler: {
+      type: 'webpack5',
+      prebundle: {
+        enable: false,
+        force: true
+      }
+    },
     // Webpack 持久化缓存配置，建议开启。默认配置请参考：https://docs.taro.zone/docs/config-detail#cache
     cache: {
       enable: true
