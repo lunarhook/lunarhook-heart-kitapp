@@ -1,63 +1,66 @@
 {
-  "name": "lunarhook-fingerheart-kitapp",
-  "version": "1.0.0",
-  "private": true,
-  "description": "fingerheart",
-  "templateInfo": {
-    "name": "default",
-    "typescript": false,
-    "css": "Sass",
-    "framework": "React"
-  },
-  "scripts": {
-    "build:weapp": "taro build --type weapp",
-    "dev:weapp": "npm run build:weapp -- --watch"
-  },
-  "browserslist": [
-    "last 3 versions",
-    "Android >= 4.1",
-    "ios >= 8"
-  ],
-  "dependencies": {
-    "@babel/runtime": "^7.21.5",
-    "@tarojs/components": "3.6.28",
-    "@tarojs/helper": "3.6.28",
-    "@tarojs/plugin-framework-react": "3.6.28",
-    "@tarojs/plugin-platform-alipay": "3.6.28",
-    "@tarojs/plugin-platform-h5": "3.6.28",
-    "@tarojs/plugin-platform-harmony-hybrid": "3.6.28",
-    "@tarojs/plugin-platform-jd": "3.6.28",
-    "@tarojs/plugin-platform-qq": "3.6.28",
-    "@tarojs/plugin-platform-swan": "3.6.28",
-    "@tarojs/plugin-platform-tt": "3.6.28",
-    "@tarojs/plugin-platform-weapp": "3.6.28",
-    "@tarojs/react": "3.6.28",
-    "@tarojs/runtime": "3.6.28",
-    "@tarojs/shared": "3.6.28",
-    "@tarojs/taro": "3.6.28",
-    "react": "^18.0.0",
-    "react-dom": "^18.0.0",
-    "taro-ui": "^3.3.0"
-  },
-  "devDependencies": {
-    "@babel/core": "^7.8.0",
-    "@pmmmwh/react-refresh-webpack-plugin": "^0.5.5",
-    "@tarojs/cli": "3.6.28",
-    "@tarojs/taro-loader": "3.6.28",
-    "@tarojs/webpack5-runner": "3.6.28",
-    "@types/node": "^18.15.11",
-    "@types/react": "^18.0.0",
-    "@types/webpack-env": "^1.13.6",
-    "babel-preset-taro": "3.6.28",
-    "eslint": "^8.12.0",
-    "eslint-config-taro": "3.6.28",
-    "eslint-plugin-import": "^2.12.0",
-    "eslint-plugin-react": "^7.8.2",
-    "eslint-plugin-react-hooks": "^4.2.0",
-    "postcss": "^8.4.18",
-    "react-refresh": "^0.11.0",
-    "stylelint": "^14.4.0",
-    "ts-node": "^10.9.1",
-    "webpack": "5.78.0"
-  }
+	"name": "lunarhook-fingerheart-kitapp",
+	"version": "1.0.0",
+	"private": true,
+	"description": "fingerheart",
+	"templateInfo": {
+		"name": "default",
+		"typescript": false,
+		"css": "Sass",
+		"framework": "React"
+	},
+	"scripts": {
+		"build:weapp": "taro build --type weapp",
+		"dev:weapp": "npm run build:weapp -- --watch"
+	},
+	"browserslist": [
+		"last 3 versions",
+		"Android >= 4.1",
+		"ios >= 8"
+	],
+	"dependencies": {
+		"@babel/plugin-proposal-class-properties": "^7.18.6",
+		"@babel/preset-react": "^7.24.7",
+		"@babel/runtime": "^7.25.0",
+		"@tarojs/components": "4.0.4",
+		"@tarojs/helper": "4.0.4",
+		"@tarojs/plugin-framework-react": "4.0.4",
+		"@tarojs/plugin-platform-alipay": "4.0.4",
+		"@tarojs/plugin-platform-h5": "4.0.4",
+		"@tarojs/plugin-platform-harmony-hybrid": "4.0.4",
+		"@tarojs/plugin-platform-jd": "4.0.4",
+		"@tarojs/plugin-platform-qq": "4.0.4",
+		"@tarojs/plugin-platform-swan": "4.0.4",
+		"@tarojs/plugin-platform-tt": "4.0.4",
+		"@tarojs/plugin-platform-weapp": "4.0.4",
+		"@tarojs/react": "4.0.4",
+		"@tarojs/runtime": "4.0.4",
+		"@tarojs/shared": "4.0.4",
+		"@tarojs/taro": "4.0.4",
+		"react": "^18.3.1",
+		"react-dom": "^18.3.1",
+		"taro": "^0.0.7",
+		"taro-ui": "^3.3.0"
+	},
+	"devDependencies": {
+		"@babel/core": "^7.25.2",
+		"@pmmmwh/react-refresh-webpack-plugin": "^0.5.15",
+		"@tarojs/cli": "4.0.4",
+		"@tarojs/taro-loader": "4.0.4",
+		"@tarojs/webpack5-runner": "4.0.4",
+		"@types/node": "^22.2.0",
+		"@types/react": "^18.3.3",
+		"@types/webpack-env": "^1.18.5",
+		"babel-preset-taro": "4.0.4",
+		"eslint": "^9.9.0",
+		"eslint-config-taro": "4.0.4",
+		"eslint-plugin-import": "^2.29.1",
+		"eslint-plugin-react": "^7.35.0",
+		"eslint-plugin-react-hooks": "^4.6.2",
+		"postcss": "^8.4.41",
+		"react-refresh": "^0.14.2",
+		"stylelint": "^16.8.1",
+		"ts-node": "^10.9.2",
+		"webpack": "5.93.0"
+	}
 }
